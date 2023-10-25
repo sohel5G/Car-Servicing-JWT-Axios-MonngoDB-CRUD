@@ -16,7 +16,7 @@ function Root() {
           <Outlet></Outlet>
         </div>
       </main>
-      <footer className="bg-black">
+      <footer className="">
         <div className="container mx-auto px-6">
           <Footer></Footer>
         </div>

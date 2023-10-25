@@ -1,15 +1,20 @@
 import { NavLink } from "react-router-dom";
+import useThemeMode from "../hooks/useThemeMode";
 
 const Header = () => {
+    const { changeThemeMode, themeMode } = useThemeMode();
 
-    const navItems = 
-    <>
-        <li> <NavLink to={'/'}> Home </NavLink> </li>
-        <li> <NavLink to={'/about'}> About </NavLink> </li>
-        <li> <NavLink to={'/services'}> Services </NavLink> </li>
-        <li> <NavLink to={'/blog'}> Blog </NavLink> </li>
-        <li> <NavLink to={'/contact'}> Contact </NavLink> </li>
-    </>
+    console.log(themeMode);
+
+    const navItems =
+        <>
+            <li> <NavLink to={'/'}> Home </NavLink> </li>
+            <li> <NavLink to={'/about'}> About </NavLink> </li>
+            <li> <NavLink to={'/services'}> Services </NavLink> </li>
+            <li> <NavLink to={'/blog'}> Blog </NavLink> </li>
+            <li> <NavLink to={'/contact'}> Contact </NavLink> </li>
+            <li> <span onClick={changeThemeMode}>{themeMode === 'light' ? <><b>Dark</b></> : <><b className="dark:text-white">Light</b></>}</span> </li>
+        </>
 
     return (
         <>
