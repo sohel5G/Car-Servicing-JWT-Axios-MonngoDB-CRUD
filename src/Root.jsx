@@ -6,18 +6,18 @@ function Root() {
 
   return (
     <>
-      <header>
-        <div className="container mx-auto px-6">
+      <header className="dark:bg-slate-800 shadow">
+        <div className="container mx-auto px-4">
           <Header></Header>
         </div>
       </header>
       <main>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <Outlet></Outlet>
         </div>
       </main>
-      <footer className="">
-        <div className="container mx-auto px-6">
+      <footer className="bg-slate-900">
+        <div className="container mx-auto px-4">
           <Footer></Footer>
         </div>
       </footer>
