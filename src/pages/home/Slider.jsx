@@ -17,8 +17,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project </a>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project </a>
                             </div>
                         </div>
                     </div>
@@ -51,8 +51,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project</a>
                             </div>
                         </div>
                     </div>
@@ -68,8 +68,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project</a>
                             </div>
                         </div>
                     </div>
@@ -85,8 +85,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project </a>
                             </div>
                         </div>
                     </div>
@@ -102,8 +102,8 @@ const Slider = () => {
                             <h1 className="text-white text-5xl font-bold">Affordable <br /> Price For Car <br /> Servicing</h1>
                             <p className="text-white py-6 text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className="flex gap-5 items-center">
-                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
-                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Appointment</a>
+                                <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Discover More</Link>
+                                <a className="btn border-2 hover:border-primary border-white text-white hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">Latest Project </a>
                             </div>
                         </div>
                     </div>

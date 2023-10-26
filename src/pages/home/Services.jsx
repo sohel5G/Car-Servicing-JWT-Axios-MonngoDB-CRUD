@@ -18,6 +18,9 @@ const Services = () => {
                 <Service></Service>
                 <Service></Service>
             </div>
+            <div className="pb-14 text-center">
+                <a className="btn border-2 hover:border-primary border-primary text-primary hover:bg-primary hover:text-white capitalize font-semibold text-base tracking-[2px]">More Services </a>
+            </div>
         </>
     );
 };

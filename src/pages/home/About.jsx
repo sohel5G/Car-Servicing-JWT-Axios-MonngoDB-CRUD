@@ -17,7 +17,7 @@ const About = () => {
                     <p className="pt-6 text-xl dark:text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                     <p className="py-6 text-xl dark:text-white">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                 <div className="flex gap-5 items-center">
-                    <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Appointment</Link>
+                        <Link className="btn border-2 hover:border-primary hover:bg-primary border-primary bg-primary text-white rounded-md capitalize font-semibold text-base tracking-[2px]">Get More Info</Link>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import group35 from "../../assets/icons/Group 35.png"
 
 const Helps = () => {
     return (
-        <div className="bg-slate-900 flex lg:flex-row flex-col gap-8 justify-around py-20 items-center my-20">
+        <div className="bg-black flex lg:flex-row flex-col gap-8 justify-around py-20 items-center my-20">
             <div className="flex gap-6 items-center justify-center">
                 <div>
                     <img src={timetable} alt="" />
