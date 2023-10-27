@@ -8,9 +8,12 @@ import { MdLightMode } from 'react-icons/md';
 import CartWidget from "../pages/cart/CartWidget";
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { FaUserAlt } from 'react-icons/fa';
+import { useContext } from "react";
+import { authContext } from "../providers/AuthProviders";
 
 const Header = () => {
     const { changeThemeMode, themeMode } = useThemeMode();
+    const { user } = useContext(authContext);
 
     const navItems =
         <>
@@ -19,7 +22,7 @@ const Header = () => {
             <li className="my-5"> <NavLink className="dark:text-white py-2 px-3 rounded-md font-medium hover:bg-primary-myPrimaryColor hover:text-white" to={'/services'}> Services </NavLink> </li>
             <li className="my-5"> <NavLink className="dark:text-white py-2 px-3 rounded-md font-medium hover:bg-primary-myPrimaryColor hover:text-white" to={'/blog'}> Blog </NavLink> </li>
             <li className="my-5"> <NavLink className="dark:text-white py-2 px-3 rounded-md font-medium hover:bg-primary-myPrimaryColor hover:text-white" to={'/contact'}> Contact </NavLink> </li>
-           
+
         </>
 
     return (
@@ -59,8 +62,20 @@ const Header = () => {
                         }
                     </button>
 
-                    <Link to={'login'} className="text-black hover:text-primary-myPrimaryColor dark:text-white text-xl cursor-pointer"> <FaUserAlt></FaUserAlt> </Link>
-
+                    {
+                        user ? <>
+                            <div>
+                                <Link to={'/dashboard/profile'}> <img
+                                    className="w-6 h-6 rounded-full shadow-lg"
+                                    src={user?.photoURL || 'https://picsum.photos/200'}
+                                    alt="Bonnie image"/> 
+                                </Link>
+                            </div>
+                        </> : <>
+                            <Link to={'/dashboard/profile'} className="text-black hover:text-primary-myPrimaryColor dark:text-white text-xl cursor-pointer"> <FaUserAlt></FaUserAlt> </Link>
+                        </>
+                    }
+                    
                     <a className="text-black hover:text-primary-myPrimaryColor dark:text-white text-xl cursor-pointer"> <FaRegCalendarAlt></FaRegCalendarAlt> </a>
 
                     <CartWidget></CartWidget>

@@ -1,17 +1,45 @@
 import { Link } from "react-router-dom";
+import loginimage from "../../assets/images/login/login.svg"
+import { useContext } from "react";
+import { authContext } from "../../providers/AuthProviders";
 
 const Register = () => {
+
+    const { registerUser } = useContext(authContext);
+
+    const handleRegisterUser = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+
+        registerUser(email, password)
+            .then((succData) => {
+                const user = succData.user;
+                console.log('SignUp Use', user)
+            })
+            .catch((errorData) => {
+                const error = errorData.message;
+                console.log('SignUp error', error)
+            });
+
+    }
+
     return (
         <>
-            <section>
-                <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                    
-                    <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <section className="lg:flex gap-14 flex-col lg:flex-row lg:h-[80vh] items-center py-16">
+                <div className="flex-1 flex justify-end">
+                    <img className="mx-auto lg:mx-0 w-[250px] md:w-[400px]" src={loginimage} alt="" />
+                </div>
+                <div className="flex-1">
+
+                    <div className="max-w-md bg-white rounded-lg shadow dark:border dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Create and account
                             </h1>
-                            <form className="space-y-4 md:space-y-6" action="#">
+                            <form className="space-y-4 md:space-y-6" onSubmit={handleRegisterUser}>
                                 <div>
                                     <label
                                         htmlFor="email"

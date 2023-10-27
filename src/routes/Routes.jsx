@@ -6,6 +6,10 @@ import About from "../pages/about/About.jsx";
 import LogIn from "../pages/login/LogIn.jsx";
 import Register from "../pages/register/Register.jsx";
 import Contact from "../pages/contact/Contact.jsx";
+import Dashboard from "../dashboard/Dashboard.jsx";
+import Profile from "../dashboard/Profile.jsx";
+import DashboardContent from "../dashboard/DashboardContent.jsx";
+import PrivateRoute from "../privateRoute/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
     {
@@ -18,20 +22,34 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path:'/about',
+                path: '/about',
                 element: <About></About>
             },
             {
-                path:'/login',
-                element:<LogIn></LogIn>
+                path: '/login',
+                element: <LogIn></LogIn>
             },
             {
-                path:'register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/contact',
+                path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path:'/dashboard',
+                        element: <DashboardContent></DashboardContent>
+                    },
+                    {
+                        path: '/dashboard/profile',
+                        element: <PrivateRoute> <Profile></Profile> </PrivateRoute> 
+                    }
+                ]
             }
         ]
     },
