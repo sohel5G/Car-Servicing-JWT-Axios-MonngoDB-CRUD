@@ -6,7 +6,7 @@ function Root() {
 
   return (
     <div className="dark:bg-gray-900">
-      <header className="dark:bg-slate-800 shadow">
+      <header className="dark:bg-black shadow">
         <div className="container mx-auto px-4">
           <Header></Header>
         </div>

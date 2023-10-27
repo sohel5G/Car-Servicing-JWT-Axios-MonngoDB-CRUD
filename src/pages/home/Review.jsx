@@ -10,7 +10,7 @@ const Review = () => {
     return (
         <>
             <div className="text-center lg:w-2/4 mx-auto pt-14">
-                <p className="text-primary font-bold text-lg">Testimonial</p>
+                <p className="text-primary-myPrimaryColor font-bold text-lg">Testimonial</p>
                 <h1 className="text-4xl font-bold dark:text-white">What Customer Says</h1>
                 <p className="pt-6 text-xl dark:text-white"> the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  </p>
             </div>
@@ -21,7 +21,7 @@ const Review = () => {
                         variant="text"
                         color="gray"
                         onClick={handlePrev}
-                        className="!absolute top-2/4 left-0 -translate-y-2/4 bg-[#E8E8E8] rounded-full hover:bg-primary hover:text-white"
+                        className="!absolute top-2/4 left-0 -translate-y-2/4 bg-[#E8E8E8] rounded-full hover:bg-primary-myPrimaryColor hover:text-white"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const Review = () => {
                         variant="text"
                         color="gray"
                         onClick={handleNext}
-                        className="!absolute top-2/4 !right-0 -translate-y-2/4 bg-[#E8E8E8] rounded-full hover:bg-primary hover:text-white"
+                        className="!absolute top-2/4 !right-0 -translate-y-2/4 bg-[#E8E8E8] rounded-full hover:bg-primary-myPrimaryColor hover:text-white"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const Review = () => {
                             </Stack>
                         </div>
                     </div>
-                    
+
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-4 items-center">
@@ -114,8 +114,8 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div className="flex flex-col lg:flex-row gap-8 items-center px-16">
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
@@ -141,7 +141,7 @@ const Review = () => {
                             </Stack>
                         </div>
                     </div>
-                    
+
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-4 items-center">
@@ -167,8 +167,8 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div className="flex flex-col lg:flex-row gap-8 items-center px-16">
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
@@ -194,7 +194,7 @@ const Review = () => {
                             </Stack>
                         </div>
                     </div>
-                    
+
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-4 items-center">
@@ -220,8 +220,8 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div className="flex flex-col lg:flex-row gap-8 items-center px-16">
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
@@ -247,7 +247,7 @@ const Review = () => {
                             </Stack>
                         </div>
                     </div>
-                    
+
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-4 items-center">
@@ -273,8 +273,8 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div className="flex flex-col lg:flex-row gap-8 items-center px-16">
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
@@ -300,7 +300,7 @@ const Review = () => {
                             </Stack>
                         </div>
                     </div>
-                    
+
                     <div className="py-5 lg:py-0">
                         <div className="flex items-center justify-between">
                             <div className="flex gap-4 items-center">
@@ -326,8 +326,8 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                
-                
+
+
 
             </Carousel>
         </>
