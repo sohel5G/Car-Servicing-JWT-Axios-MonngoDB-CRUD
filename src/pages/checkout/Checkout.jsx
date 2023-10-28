@@ -8,9 +8,6 @@ const Checkout = () => {
     const service = useLoaderData();
     const { user } = useContext(authContext);
 
-    console.log(service)
-    console.log(user)
-
     const handleBookService = (e) => {
         e.preventDefault()
 
@@ -20,20 +17,20 @@ const Checkout = () => {
         const email = form.email.value;
         const dueAmount = form.dueAmount.value;
         const comments = form.comments.value;
-        const serviceRequest = { 
+        const serviceRequest = {
             serviceName: service.title,
             serviceId: service._id,
             serviceImg: service.img,
-            customerName: name, 
-            date, 
-            email, 
-            dueAmount, 
-            comments 
+            customerName: name,
+            date,
+            email,
+            dueAmount,
+            comments
         }
 
         axios.post('http://localhost:5000/bookings', serviceRequest)
-        .then( res => console.log(res.data) )
-
+            .then(res => console.log(res.data))
+        
     }
 
     return (

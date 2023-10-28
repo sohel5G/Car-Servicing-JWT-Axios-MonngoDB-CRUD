@@ -13,6 +13,7 @@ import PrivateRoute from "../privateRoute/PrivateRoute.jsx";
 import ServiceDetails from "../pages/home/ServiceDetails.jsx";
 import Services from "../pages/home/Services.jsx";
 import Checkout from "../pages/checkout/Checkout.jsx";
+import Bookings from "../dashboard/bookings/Bookings.jsx";
 
 const router = createBrowserRouter([
     {
@@ -59,11 +60,15 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path:'/dashboard',
-                        element: <DashboardContent></DashboardContent>
+                        element: <PrivateRoute> <DashboardContent></DashboardContent> </PrivateRoute>
                     },
                     {
                         path: '/dashboard/profile',
                         element: <PrivateRoute> <Profile></Profile> </PrivateRoute> 
+                    },
+                    {
+                        path: '/dashboard/Bookings',
+                        element: <PrivateRoute> <Bookings></Bookings> </PrivateRoute>
                     }
                 ]
             }
