@@ -11,6 +11,8 @@ import Profile from "../dashboard/Profile.jsx";
 import DashboardContent from "../dashboard/DashboardContent.jsx";
 import PrivateRoute from "../privateRoute/PrivateRoute.jsx";
 import ServiceDetails from "../pages/home/ServiceDetails.jsx";
+import Services from "../pages/home/Services.jsx";
+import Checkout from "../pages/checkout/Checkout.jsx";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +43,15 @@ const router = createBrowserRouter([
             {
                 path:'/service/:id',
                 element:<ServiceDetails></ServiceDetails>
+            },
+            {
+                path:'/services',
+                element:<Services></Services>
+            },
+            {
+                path:'/checkout/:id',
+                element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/checkout/service/${params.id}`)
             },
             {
                 path: '/dashboard',

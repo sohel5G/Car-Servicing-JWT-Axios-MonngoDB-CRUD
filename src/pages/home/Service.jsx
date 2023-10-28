@@ -6,7 +6,9 @@ const Service = ({ service }) => {
     const { img, price, title, _id } = service;
     return (
         <div className="p-4 border rounded shadow">
-            <img className="cursor-pointer transform scale-100 hover:scale-105 transition-transform duration-500 ease-in-out" src={img} alt="Services image" />
+            <Link to={`/service/${_id}`}>
+                <img className="cursor-pointer transform scale-100 hover:scale-105 transition-transform duration-500 ease-in-out" src={img} alt="Services image" />
+            </Link>
             <Link to={`/service/${_id}`}>
                 <h1 className="text-2xl font-medium py-5 dark:text-white hover:text-primary-myPrimaryColor"> {title} </h1>
             </Link>
