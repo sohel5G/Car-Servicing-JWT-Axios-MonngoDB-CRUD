@@ -10,6 +10,7 @@ import Dashboard from "../dashboard/Dashboard.jsx";
 import Profile from "../dashboard/Profile.jsx";
 import DashboardContent from "../dashboard/DashboardContent.jsx";
 import PrivateRoute from "../privateRoute/PrivateRoute.jsx";
+import ServiceDetails from "../pages/home/ServiceDetails.jsx";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path:'/service/:id',
+                element:<ServiceDetails></ServiceDetails>
             },
             {
                 path: '/dashboard',

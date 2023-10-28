@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
     return (
-        <div className="grid grid-cols-4 gap-3 py-11">
+        <div className="grid grid-cols-4 gap-3 py-20">
             <div>
                 <button
                     data-drawer-target="default-sidebar"
