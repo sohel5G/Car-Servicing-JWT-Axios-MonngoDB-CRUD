@@ -42,29 +42,29 @@ const router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path:'/service/:id',
-                element:<ServiceDetails></ServiceDetails>
+                path: '/service/:id',
+                element: <PrivateRoute> <ServiceDetails></ServiceDetails> </PrivateRoute>
             },
             {
-                path:'/services',
-                element:<Services></Services>
+                path: '/services',
+                element: <Services></Services>
             },
             {
-                path:'/checkout/:id',
+                path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/checkout/service/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/checkout/service/${params.id}`)
             },
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>,
                 children: [
                     {
-                        path:'/dashboard',
+                        path: '/dashboard',
                         element: <PrivateRoute> <DashboardContent></DashboardContent> </PrivateRoute>
                     },
                     {
                         path: '/dashboard/profile',
-                        element: <PrivateRoute> <Profile></Profile> </PrivateRoute> 
+                        element: <PrivateRoute> <Profile></Profile> </PrivateRoute>
                     },
                     {
                         path: '/dashboard/Bookings',

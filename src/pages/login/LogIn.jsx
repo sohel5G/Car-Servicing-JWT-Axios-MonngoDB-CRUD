@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginimage from "../../assets/images/login/login.svg"
 import { FaGoogle } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { useContext } from "react";
 import { authContext } from "../../providers/AuthProviders";
+import axios from "axios";
 
 const LogIn = () => {
     const { googleSignInWithPopup, userLogIn } = useContext(authContext);
+    const location = useLocation()
     const navigate = useNavigate();
 
     const handleUserSignInWithPopup = () => {
@@ -16,7 +18,7 @@ const LogIn = () => {
             .then((succData) => {
                 const user = succData.user;
                 console.log(user)
-                navigate('/dashboard')
+                navigate(location?.state ? location?.state : '/dashboard')
             }).catch((errorData) => {
                 const error = errorData.message;
                 console.log(error)
@@ -29,13 +31,15 @@ const LogIn = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password)
-
         userLogIn(email, password)
             .then((succData) => {
                 const user = succData.user;
-                console.log('login user', user)
-                navigate('/dashboard')
+                // navigate(location?.state ? location?.state : '/dashboard')
+
+                const jwtUser = { email: user?.email }
+                axios.post('http://localhost:5000/jwt', jwtUser)
+                    .then(res => console.log(res.data))
+
             })
             .catch((errorData) => {
                 const error = errorData.message;
