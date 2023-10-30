@@ -17,8 +17,16 @@ const LogIn = () => {
         googleSignInWithPopup()
             .then((succData) => {
                 const user = succData.user;
-                console.log(user)
-                navigate(location?.state ? location?.state : '/dashboard')
+
+                const jwtUser = { email: user?.email }
+                axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.success) {
+                            navigate(location?.state ? location?.state : 'dashboard')
+                        }
+                    })
+
             }).catch((errorData) => {
                 const error = errorData.message;
                 console.log(error)
@@ -34,12 +42,15 @@ const LogIn = () => {
         userLogIn(email, password)
             .then((succData) => {
                 const user = succData.user;
-                // navigate(location?.state ? location?.state : '/dashboard')
 
                 const jwtUser = { email: user?.email }
-                axios.post('http://localhost:5000/jwt', jwtUser)
-                    .then(res => console.log(res.data))
-
+                axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate(location?.state ? location?.state : '/dashboard')
+                        }
+                    })
             })
             .catch((errorData) => {
                 const error = errorData.message;
@@ -50,7 +61,7 @@ const LogIn = () => {
     return (
         <>
 
-            <section className="lg:flex gap-14 flex-col lg:flex-row lg:h-[80vh] items-center py-16">
+            <section className="lg:flex gap-14 flex-col lg:flex-row items-center py-16">
                 <div className="flex-1 flex justify-end">
                     <img className="mx-auto w-[250px] lg:mx-0 md:w-[400px]" src={loginimage} alt="" />
                 </div>

@@ -16,7 +16,7 @@ const ServiceDetails = () => {
             <img className="" src={service.img} alt="Services image" />
             <h1 className="text-2xl font-medium py-5 dark:text-white"> {service.title} </h1>
 
-            <p className="text-lg"> {service.description} </p>
+            <p className="text-lg dark:text-white"> {service.description} </p>
 
             <p className="mt-6 text-xl font-semibold text-primary-myPrimaryColor">Price : ${service.price}</p>
 

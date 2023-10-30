@@ -36,7 +36,7 @@ const Booking = ({ booking, handleDelete, handleConfirm }) => {
                                 </span>
                             </> :
                             <>
-                                <button className='text-black' onClick={() => handleConfirm(_id)}>
+                                <button className='text-black dark:text-red-300' onClick={() => handleConfirm(_id)}>
                                     Confirm
                                 </button>
                             </>

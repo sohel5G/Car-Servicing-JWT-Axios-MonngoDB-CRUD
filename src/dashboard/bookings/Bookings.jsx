@@ -8,7 +8,7 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/bookings?email=${user.email}`)
+        axios.get(`http://localhost:5000/bookings?email=${user.email}`, { withCredentials: true })
             .then((res) => setBookings(res.data));
     }, [user])
 
@@ -30,10 +30,10 @@ const Bookings = () => {
     }
 
     const handleConfirm = id => {
-        axios.patch(`http://localhost:5000/bookings/${id}`, {status:'confirmed'})
+        axios.patch(`http://localhost:5000/bookings/${id}`, { status: 'confirmed' })
             .then(res => {
-                if (res.data.modifiedCount > 0){
-                    const remaining = bookings.filter(booking => booking._id !== id);  
+                if (res.data.modifiedCount > 0) {
+                    const remaining = bookings.filter(booking => booking._id !== id);
                     const confirmedBooking = bookings.find(booking => booking._id === id);
                     confirmedBooking.status = 'confirmed'
                     const newUpdatedBookings = [...remaining, confirmedBooking]
