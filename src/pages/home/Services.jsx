@@ -8,7 +8,7 @@ const Services = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/services')
+        axios.get('https://car-servicing-server-zeta.vercel.app/services')
             .then(res => setServices(res.data))
     }, [])
 
@@ -23,7 +23,7 @@ const Services = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 py-14">
                 {
-                    services.map(service => <Service service={service} key={service._id}></Service> )
+                    services.map(service => <Service service={service} key={service._id}></Service>)
                 }
             </div>
             <div className="pb-14 text-center">

@@ -28,9 +28,9 @@ const Checkout = () => {
             comments
         }
 
-        axios.post('http://localhost:5000/bookings', serviceRequest)
+        axios.post('https://car-servicing-server-zeta.vercel.app/bookings', serviceRequest)
             .then(res => console.log(res.data))
-        
+
     }
 
     return (
