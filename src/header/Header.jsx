@@ -76,7 +76,7 @@ const Header = () => {
                         </>
                     }
                     
-                    <a className="text-black hover:text-primary-myPrimaryColor dark:text-white text-xl cursor-pointer"> <FaRegCalendarAlt></FaRegCalendarAlt> </a>
+                    <Link to={'/dashboard/Bookings'} className="text-black hover:text-primary-myPrimaryColor dark:text-white text-xl cursor-pointer"> <FaRegCalendarAlt></FaRegCalendarAlt> </Link>
 
                     <CartWidget></CartWidget>
                 </div>

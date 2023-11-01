@@ -11,9 +11,10 @@ import Profile from "../dashboard/Profile.jsx";
 import DashboardContent from "../dashboard/DashboardContent.jsx";
 import PrivateRoute from "../privateRoute/PrivateRoute.jsx";
 import ServiceDetails from "../pages/home/ServiceDetails.jsx";
-import Services from "../pages/home/Services.jsx";
 import Checkout from "../pages/checkout/Checkout.jsx";
 import Bookings from "../dashboard/bookings/Bookings.jsx";
+import ServicesPage from "../pages/services/ServicesPage.jsx";
+import Blogs from "../pages/blogs/Blogs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -47,12 +48,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                element: <ServicesPage></ServicesPage>
             },
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://car-servicing-server-zeta.vercel.app/checkout/service/${params.id}`)
+            },
+            {
+                path: '/blog',
+                element: <Blogs></Blogs>
             },
             {
                 path: '/dashboard',

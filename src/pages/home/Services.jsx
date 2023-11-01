@@ -17,7 +17,7 @@ const Services = () => {
     return (
         <>
             <div className="text-center lg:w-2/4 mx-auto pt-7">
-                <p className="text-primary-myPrimaryColor font-bold text-lg">Service</p>
+                <p className="text-primary-myPrimaryColor font-bold text-lg">Services</p>
                 <h1 className="text-4xl font-bold dark:text-white"> Our Service Area </h1>
                 <p className="pt-6 text-xl dark:text-white"> the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
