@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://car-servicing-server-zeta.vercel.app/checkout/service/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/checkout/service/${params.id}`)
             },
             {
                 path: '/blog',

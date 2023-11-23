@@ -19,7 +19,7 @@ const LogIn = () => {
                 const user = succData.user;
 
                 const jwtUser = { email: user?.email }
-                axios.post('https://car-servicing-server-zeta.vercel.app/jwt', jwtUser, { withCredentials: true })
+                axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
                     .then(res => {
                         console.log(res.data)
                         if (res.data.success) {
@@ -44,7 +44,7 @@ const LogIn = () => {
                 const user = succData.user;
 
                 const jwtUser = { email: user?.email }
-                axios.post('https://car-servicing-server-zeta.vercel.app/jwt', jwtUser, { withCredentials: true })
+                axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
                     .then(res => {
                         console.log(res.data);
                         if (res.data.success) {

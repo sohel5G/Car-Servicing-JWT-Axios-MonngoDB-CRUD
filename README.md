@@ -31,7 +31,7 @@ app.use(cors({
 - axios set withCredentials: true (it's for all method to send client browser cookie to server API like post, get, put fetch etc etc.... )
 ```JavaScript
 const jwtUser = { email: user?.email }
-      axios.post('https://car-servicing-server-zeta.vercel.app/jwt', jwtUser, { withCredentials: true })
+      axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
         .then(res => console.log(res.data))
 ```
 
@@ -70,7 +70,7 @@ app.post('/jwt', (req, res) => {
 #### For all API lke this below : 
 - Client Side 
 ```JavaScript
-axios.get(`https://car-servicing-server-zeta.vercel.app/bookings?email=${user.email}`, { withCredentials: true })
+axios.get(`http://localhost:5000/bookings?email=${user.email}`, { withCredentials: true })
     .then((res) => setBookings(res.data));
 ```
 

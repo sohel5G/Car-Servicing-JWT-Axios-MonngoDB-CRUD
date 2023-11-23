@@ -8,7 +8,7 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://car-servicing-server-zeta.vercel.app/bookings?email=${user.email}`, { withCredentials: true })
+        axios.get(`http://localhost:5000/bookings?email=${user.email}`, { withCredentials: true })
             .then((res) => setBookings(res.data));
     }, [user])
 
@@ -16,10 +16,10 @@ const Bookings = () => {
         const proceed = confirm('Are you sure, you want to delete this service? ')
 
         if (proceed) {
-            axios.delete(`https://car-servicing-server-zeta.vercel.app/bookings/${id}`)
+            axios.delete(`http://localhost:5000/bookings/${id}`)
                 .then(res => {
                     if (res.data.deletedCount > 0) {
-                        // axios.get(`https://car-servicing-server-zeta.vercel.app/bookings?email=${user.email}`)
+                        // axios.get(`http://localhost:5000/bookings?email=${user.email}`)
                         //     .then((res) => setBookings(res.data));
 
                         const remainBookings = bookings.filter(booking => booking._id !== id)
@@ -30,7 +30,7 @@ const Bookings = () => {
     }
 
     const handleConfirm = id => {
-        axios.patch(`https://car-servicing-server-zeta.vercel.app/bookings/${id}`, { status: 'confirmed' })
+        axios.patch(`http://localhost:5000/bookings/${id}`, { status: 'confirmed' })
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     const remaining = bookings.filter(booking => booking._id !== id);

@@ -9,7 +9,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get('https://car-servicing-server-zeta.vercel.app/products')
+        axios.get('http://localhost:5000/products')
             .then(res => {
                 setProducts(res.data)
             })
